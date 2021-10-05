@@ -3,8 +3,11 @@
 
 #Deze functie geeft een string terug besetaande uit getallen
 #Die moeten afgeprint worden
-def geef_lijst_getallen():
-    resultaat = ""
+def geef_lijst_getallen(start, stap, aantal):
+    resultaat = "De lijst met getallen is:\n"
+    stop = start + (stap * aantal)
+    for getal in range(start,stop, stap):
+        resultaat += str(getal) + ","  #<--- resultaat = resultaat + getal
 
 
     return resultaat
